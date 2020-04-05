@@ -1,0 +1,3 @@
+name: CFoodRel
+version: ${project.version}
+main: me.advancedmical.cfoodrel.CFoodRel
