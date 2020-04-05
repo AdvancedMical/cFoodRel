@@ -1,3 +1,9 @@
 name: CFoodRel
 version: ${project.version}
 main: me.advancedmical.cfoodrel.CFoodRel
+commands:
+  cfoodreload:
+    usage: /<command?
+    description: "食物系统重载指令"
+    permission: "cfood.use.reload"
+    permission-message: "§6§l食物系统§1§l>> &c你没有权限这样做."

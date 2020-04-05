@@ -53,5 +53,21 @@ public final class CFoodRel extends JavaPlugin implements Listener {
             } catch (NullPointerException npe){}
         }
     }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (command.getName().equals("cfoodreload")){
+                if (sender.hasPermission("cfood.use.reload")){
+                    this.reloadConfig();
+                    sender.sendMessage(prefix+" §a插件已重载.");
+                }
+            return true;
+        }
+        return false;
+    }
+
+    public void helpMsg(CommandSender sender) {
+        sender.sendMessage(prefix+" §a/cfood reload §9=== §b重载插件.");
+    }
 }
 
